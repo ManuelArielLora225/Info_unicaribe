@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admisión - Unicaribe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: #00509e;
+    }
+
+    nav button {
+      background-color: #fff;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #00509e;
+      transition: background-color 0.2s ease;
+    }
+
+    nav button:hover {
+      background-color: #e0ecff;
+    }
+
+    section {
+      display: none;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #00509e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav button {
+        width: 90%;
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Información de Admisión - Unicaribe</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('inscripcion')">📌 Inscripción</button>
+    <button onclick="showSection('requisitos')">📄 Requisitos</button>
+    <button onclick="showSection('costos')">💰 Costos</button>
+    <button onclick="showSection('convalidacion')">🔄 Convalidación</button>
+    <button onclick="showSection('horarios')">🕒 Horarios</button>
+    <button onclick="showSection('modalidad')">🎓 Modalidad</button>
+    <button onclick="showSection('contacto')">📞 Contacto</button>
+  </nav>
+
+  <section id="inscripcion" class="active">
+    <h2>📌 Inscripción y Admisión</h2>
+    <p>Inscríbete cualquier día, de forma virtual en:
+      <a href="https://unicaribe.edu.do/admisiones/formulario-de-admision/" target="_blank">formulario de admisión</a>
+      o presencialmente en el Departamento de Admisiones.
+    </p>
+  </section>
+
+  <section id="requisitos">
+    <h2>📄 Requisitos para Transferidos</h2>
+    <ul>
+      <li>Acta de nacimiento legalizada (vigencia máxima 6 meses).</li>
+      <li>Récord de notas legalizado por el MESCYT.</li>
+      <li>Certificado oficial del bachillerato (MINERD).</li>
+      <li>Récord de notas del bachillerato firmado por el Distrito Escolar.</li>
+      <li>Certificado médico firmado y sellado.</li>
+      <li>Dos fotos 2×2 (de frente).</li>
+      <li>Copia de la cédula de identidad.</li>
+    </ul>
+    <p><strong>Importante:</strong><br>
+      • Si eres graduado, presenta el título legalizado por el MESCYT.<br>
+      • No necesitas récord de bachillerato si ya tienes otra licenciatura.
+    </p>
+  </section>
+
+  <section id="costos">
+    <h2>💰 Costo de Inscripción</h2>
+    <ul>
+      <li>Admisión: RD$500</li>
+      <li>Inscripción: RD$500</li>
+      <li>Carnet: RD$500</li>
+      <li>Primera asignatura: RD$2,500</li>
+      <li>Servicios TI: RD$450</li>
+    </ul>
+    <p><strong>Total: RD$4,450</strong></p>
+    <p>
+      🔹 Presencial: RD$3,450 por asignatura<br>
+      🔹 Virtual: RD$3,950 por asignatura (desde enero 2024)
+    </p>
+  </section>
+
+  <section id="convalidacion">
+    <h2>🔄 Convalidación de Asignaturas</h2>
+    <ul>
+      <li>Solicítala al momento de la admisión.</li>
+      <li>Hasta el 49% de asignaturas cursadas.</li>
+      <li>Costo: RD$150 por asignatura.</li>
+      <li>Egresados del ITLA pueden convalidar hasta 2 años.</li>
+      <li>Consulta con tu Dirección de Carrera.</li>
+    </ul>
+  </section>
+
+  <section id="horarios">
+    <h2>🕒 Horarios</h2>
+    <h3>Clases</h3>
+    <ul>
+      <li>Lunes a Viernes:
+        <ul>
+          <li>Matutino: 9:00 am – 1:00 pm</li>
+          <li>Vespertino: 2:00 pm – 6:00 pm</li>
+          <li>Nocturno: 6:00 pm – 10:00 pm</li>
+        </ul>
+      </li>
+      <li>Fines de semana:
+        <ul>
+          <li>Matutino: 8:00 am – 12:00 pm</li>
+          <li>Vespertino: 1:00 pm – 5:00 pm</li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Administración</h3>
+    <ul>
+      <li>Lunes a Viernes: 8:00 am – 9:30 pm</li>
+      <li>Sábados: 8:00 am – 4:00 pm</li>
+      <li>Domingos y feriados: 8:00 am – 3:00 pm</li>
+    </ul>
+  </section>
+
+  <section id="modalidad">
+    <h2>🎓 Modalidad Académica</h2>
+    <ul>
+      <li>1 asignatura por mes</li>
+      <li>1 encuentro semanal de 4 horas</li>
+      <li>5 encuentros por materia</li>
+      <li>Duración estimada: 4 años</li>
+      <li>Primera materia presencial obligatoria</li>
+      <li>Modalidad presencial o virtual</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>📞 Contacto</h2>
+    <p>
+      📍 Autopista 30 de mayo, Urbanización Tropical, Santo Domingo, RD<br>
+      📞 <a href="tel:+18096161616">+1 (809) 616-1616</a><br>
+      📧 <a href="mailto:info@unicaribe.edu.do">info@unicaribe.edu.do</a>
+      🌐 <a href="https://unicaribe.edu.do/" target="_blank">Pagina Web Unicaribe</a>
+
+    </p>
+  </section>
+
+  <footer>
+    Universidad del Caribe - Unicaribe &copy; 2025
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
